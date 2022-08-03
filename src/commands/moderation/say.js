@@ -37,7 +37,7 @@ module.exports = class extends Command {
                 ])
             ])
 
-        const reply = await interaction.reply({ content: '**Informe um canal de texto ou de anúncio abaixo.**', components: [actionRow], fetchReply: true })
+        const reply = await interaction.reply({ content: '**Informe um canal de texto abaixo.**', components: [actionRow], fetchReply: true })
 
         const filter = (i) => i.user.id === interaction.user.id
         const collect = reply.createMessageComponentCollector({ filter, max: 1, time: (15000) })
