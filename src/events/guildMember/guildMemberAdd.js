@@ -1,3 +1,4 @@
+const { MessageEmbed } = require('discord.js') 
 const Event = require('../../structures/Event')
 
 module.exports = class extends Event {
@@ -12,8 +13,14 @@ module.exports = class extends Event {
 
         if (guildDB?.welcome) {
             const welcomeChannel = member.guild.channels.cache.get(guildDB.welcome.channel)
+            const embed = new MessageEmbed()
+                .setTitle(`${member.user.username} seja bem vindo(a)`)
+                .setDescription(`Seja bem-vindo(a) ao servidor __${member.user.username}__, abaixo vou listar algumas coisas interessantes que você pode encontrar por aqui. \n\n**Loja**: \`www.testing.com\`\n**Twitter**: \`@ServidoresTestings\``)
+                .setThumbnail(member.user.avatarURL())
+                .setColor('RANDOM')
+                .setTimestamp()
 
-            welcomeChannel?.send(`${member.toString()}, bem vindo(a) ao nosso servidor.`)
+            welcomeChannel?.send({ content: member.toString(), embeds: [embed] })
         }
     }
 }
