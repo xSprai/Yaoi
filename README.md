@@ -15,7 +15,3 @@ Create an .env file and pass the Token + Database URL
 Useful links:
 - MongoDB Atlas: https://www.mongodb.com/cloud/atlas
 - Robo 3t: https://robomongo.org/
-
-
-## License
-Distributed under the MIT License. See ```LICENSE``` for more information.
