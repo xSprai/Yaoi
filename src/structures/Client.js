@@ -15,7 +15,7 @@ module.exports = class extends Client {
     }
 
     registryCommands() {
-        this.guilds.cache.get('ID_DO_CANAL').commands.set(this.commands)
+        this.guilds.cache.get('ID_DO_SERVIDOR').commands.set(this.commands)
     }
 
     loadCommands(path = 'src/commands') {
