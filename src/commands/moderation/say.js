@@ -18,7 +18,7 @@ module.exports = class extends Command {
     }
 
     run = async (interaction) => {
-        if(!interaction.member.permissions.has('ADMINISTRATOR')) return interaction.reply({ content: '> Você não tem permissão para isto!', ephemeral: true })
+        if(!interaction.member.permissions.has('MANAGE_MESSAGES')) return interaction.reply({ content: '> Você não tem permissão para isto!', ephemeral: true })
 
         const channels = interaction.guild.channels.cache
             .filter(c => c.type === 'GUILD_TEXT' && c.permissionsFor(this.client.user.id).has(['SEND_MESSAGE', 'EMBED_LINKS']) && c.permissionsFor(interaction.user.id).has('SEND_MESSAGE'))
