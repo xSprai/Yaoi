@@ -1,4 +1,3 @@
-const { MessageEmbed } = require('discord.js')
 const Event = require('../../structures/Event')
 
 module.exports = class extends Event {
