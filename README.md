@@ -1,7 +1,7 @@
 # Yaoi
 A simple template used for moderation, and other miscellaneous commands.
 ``` 
-$ git clone https://github.com/vScythor/Yaoi
+$ git clone https://github.com/xSprai/Yaoi
 ```
 Install dependencies in terminal: `npm i discord.js@13.8.1 dotenv mongoose` <br>
 Create an .env file and pass the Token + Database URL
